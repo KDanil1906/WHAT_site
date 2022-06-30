@@ -85,7 +85,7 @@ a {
     transition: all .3s;
     font-weight: 600;
     color: $purple;
-    border: 4px solid $purple;
+    border: 5px solid $purple;
     background-color: #fff;
     padding: 18px 20px 17px 20px;
     height: 60px;
@@ -120,17 +120,29 @@ a {
   height: 60px;
   border: 5px solid $purple;
   margin-left: 30px;
+  display: flex;
+  justify-content: center;
 
   a {
     svg {
       fill: $purple;
-      width: 50px;
+      width: 48px;
     }
   }
 }
 
 .nav__favorites {
   margin-left: 60px;
+  display: flex;
+  // display: none;
+}
+
+.nav__random {
+  margin-left: 150px;
+}
+
+.nav__favorites~.nav__random {
+  margin-left: 30px;
 }
 
 // header end 
@@ -138,7 +150,22 @@ a {
 
 .words {
   margin-top: 80px;
+
+  .container {
+    position: relative;
+  }
 }
+
+.words__title {
+  margin-left: 140px;
+  margin-bottom: 53px;
+  padding: 0 60px;
+  color: $pink;
+  font-size: 40px;
+  font-weight: 600;
+  margin-top: 113px;
+}
+
 
 .word__item {
   margin-top: 40px;
@@ -154,7 +181,34 @@ a {
   text-transform: uppercase;
   font-weight: 600;
   color: $pink;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.word__item-favorite {
+  display: flex;
+  align-items: center;
+
+  button {
+    font-size: 0;
+    border: none;
+    background-color: inherit;
+    background-image: url('../images/heart_full.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+  }
+
+  .favorite--clicked {
+    background-image: url('../images/heart_color.png');
+  }
+}
+
+
 
 .word__item-desc {
   font-size: 24px;
@@ -173,6 +227,7 @@ a {
   font-size: 24px;
   font-weight: 400;
   margin-top: 76px;
+
   a {
     color: $pink;
     font-weight: 600;
@@ -183,9 +238,16 @@ a {
 .word__item-marks {
   display: flex;
   margin-top: 59px;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.word__item-markslike, .word__item-marksdislike {
+.word__item-markswrapper {
+  display: flex;
+}
+
+.word__item-markslike,
+.word__item-marksdislike {
   display: flex;
   align-items: center;
   font-size: 18px;
@@ -203,6 +265,7 @@ a {
 
   svg {
     transition: all .3s;
+
     &:hover {
       fill: $green;
     }
@@ -216,14 +279,16 @@ a {
   svg {
     transition: all .3s;
     transform: scaleY(-1);
+
     &:hover {
       fill: $red;
-      
+
     }
   }
 }
 
 .word__item-complain {
+  transition: .3s;
   width: 42px;
   height: 42px;
   border: 5px solid #000;
@@ -233,9 +298,103 @@ a {
   align-items: center;
 
   svg {
-    width: 150%;
+    width: 25px;
+
+    g {
+      fill: #000;
+    }
+  }
+
+  &:hover {
+    background-color: #000;
+
+    svg {
+      g {
+        fill: #fff;
+      }
+    }
   }
 }
 
-
 // words items end 
+
+// social start 
+.social {
+  background-color: #000;
+  width: 120px;
+  height: 360px;
+  position: absolute;
+  right: -120px;
+  top: 0;
+
+
+  img {
+    width: 60px;
+  }
+}
+
+.social__links {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+// social end 
+
+// footer :start 
+.footer {
+  padding: 37px;
+  margin-top: 37px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+
+}
+
+// footert end 
+// profile start 
+
+.profile__info {
+  margin-left: 140px;
+  padding: 0 60px;
+  width: 1000px;
+}
+
+.profile__info-user {
+  display: flex;
+  margin-top: 46px;
+}
+
+.profile__info-title {
+  font-size: 40px;
+  font-weight: 600;
+  color: $pink;
+  margin-top: 82px;
+}
+
+.info-user__personal-info {
+  font-size: 24px;
+  font-weight: 400;
+
+  & div + div {
+    margin-top: 28px;
+  }
+}
+
+.info-user__actions {
+  color: $purple;
+  font-size: 24px;
+  font-weight: 400;
+  margin: auto 0 0 218px;
+}
+
+.actions__exit {
+  margin-top: 27px;
+}
+
+
+
+// profile end 
