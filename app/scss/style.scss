@@ -520,7 +520,7 @@ a {
 // add word end 
 // login :start 
 
-.login__form-wrapper {
+.login__form-wrapper, .registration__form-wrapper {
   width: 500px;
   margin: 0 auto;
   display: flex;
@@ -529,14 +529,16 @@ a {
   margin-top: 51px;
 }
 
-.login__form-formbnts.general__btn {
+.login__form-formbnts.general__btn,
+.registration__form-formbnts.general__btn {
   margin-top: 45px;
-  button.login__form-btn {
+  button.login__form-btn, 
+  button.registration__form-btn {
     margin-left: 0;
   }
 }
 
-.login__reg-link {
+.login__reg-link, .registration__reg-link {
   margin-top: 45px;
   font-size: 24px;
   font-weight: 400;
@@ -550,5 +552,7 @@ a {
 
 // login :end 
 // registration start 
+
+
 
 // registration end 
