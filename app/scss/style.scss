@@ -80,14 +80,14 @@ a {
 }
 
 
-.nav__search-button {
+.nav__search-button, .general__btn {
   button {
     transition: all .3s;
     font-weight: 600;
     color: $purple;
     border: 5px solid $purple;
     background-color: #fff;
-    padding: 18px 20px 17px 20px;
+    padding: 16px 22px 20px 22px;
     height: 60px;
 
     &:hover {
@@ -379,7 +379,7 @@ a {
   font-size: 24px;
   font-weight: 400;
 
-  & div + div {
+  & div+div {
     margin-top: 28px;
   }
 }
@@ -395,6 +395,160 @@ a {
   margin-top: 27px;
 }
 
-
-
 // profile end 
+// complain start
+
+.complain__form, .common_unit {
+  margin-top: 71px;
+}
+
+.complain__form-wrapper {
+  width: 700px;
+  margin-left: 290px;
+}
+
+.complain__form-title, .common_unit-title {
+  font-size: 40px;
+  font-weight: 600;
+  padding: 0 19px;
+
+  span {
+    color: $pink;
+  }
+}
+
+.complain__form-desc, .common_unit-desc {
+  padding: 0 19px;
+  margin-top: 68px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.complain__form-form {
+  margin-top: 26px;
+
+  textarea {
+    border: none;
+    background-color: $gray;
+    resize: none;
+    width: 700px;
+    height: 150px;
+    padding: 20px;
+    color: #9F9F9F;
+    font-size: 18px;
+    font-weight: 400;
+
+    &::placeholder {
+      color: #9F9F9F;
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
+}
+
+.complain__form-formbnts, .add-word__form-formbnts {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 142px;
+
+  button:last-child {
+    margin-left: 58px;
+  }
+}
+
+// complain :end 
+// add_word start 
+
+.add-word__title {
+  margin-top: 42px;
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.add-word__form-wrapper {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.add-word-desc {
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 24px;
+
+  span {
+    color: $pink;
+  }
+}
+
+.complain__form-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0;
+
+  label {
+    width: 100%;
+    padding: 21px;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 8px;
+  }
+
+  label + label {
+    margin-top: 15px;
+  }
+
+  input {
+    width: 100%;
+    color: #9F9F9F;
+    padding: 20px;
+    background-color: $gray;
+    border: none;
+
+    &::placeholder {
+      color: #9F9F9F;
+    }
+  }
+}
+
+.add-word__form-formbnts {
+  margin-bottom: 7px;
+}
+// add word end 
+// login :start 
+
+.login__form-wrapper {
+  width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 51px;
+}
+
+.login__form-formbnts.general__btn {
+  margin-top: 45px;
+  button.login__form-btn {
+    margin-left: 0;
+  }
+}
+
+.login__reg-link {
+  margin-top: 45px;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 204px;
+
+  a {
+    color: $purple;
+    cursor: pointer;
+  }
+}
+
+// login :end 
+// registration start 
+
+// registration end 

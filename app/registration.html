@@ -23,25 +23,22 @@
         </div>
     </header>
 
-    <section class="complain__form">
+    <section class="registration">
         <div class="container">
-            <div class="complain__form-wrapper">
-                <div class="complain__form-title">
-                    Неприемлемый контент: <span>ТЕЛЕГА</span>
-                </div>
-
-                <div class="complain__form-desc">
-                    Объясните почему вы считаете, что это слово должно быть
-                    удалено с портала
-                </div>
+            <div class="registration__form-wrapper">
 
                 <form action="" class="complain__form-form">
-                    <textarea name="" id="" placeholder="Введите текст"></textarea>
-                    <div class="complain__form-formbnts general__btn">
-                        <button >Отмена</button>
-                        <button >Отправить</button>
+                    <label for="name">Имя пользователя</label>
+                    <input type="text" name="name" class="registration__general-input" placeholder="Введите имя пользователя">
+                    <label for="pass">Пароль</label>
+                    <input type="text" name="pass" class="registration__general-input" placeholder="Введите пароль">
+                    <div class="registration__form-formbnts general__btn">
+                        <button class="registration__form-btn">Войти</button>
                     </div>
                 </form>
+                <div class="registration__reg-link">
+                    Нет аккаунта? <a>Зарегистрироваться</a> 
+                </div>
             </div>
 
         </div>
